@@ -12,11 +12,20 @@ public class DisplayJokeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_joke);
 
-        Intent intent = getIntent();
-        String joke = intent.getStringExtra(JOKE_KEY);
         TextView jokeTextView = findViewById(R.id.tv_joke);
-        if (joke != null && joke.length() != 0) {
+
+        Intent intent = getIntent();
+
+        if(intent.hasExtra(JOKE_KEY)){
+            String joke = intent.getStringExtra(JOKE_KEY);
+
+            if (joke != null && joke.length() != 0) {
             jokeTextView.setText(joke);
+        }
+
+        }else{
+            //error here
+            jokeTextView.setText("Error The Joke Is Broken");
         }
     }
 }
