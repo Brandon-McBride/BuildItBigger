@@ -45,26 +45,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    //public void tellJoke(View view) {
-        //TextView mJokeText;
-
-        //mJokeText = findViewById(R.id.tv_joke_text);
-
-        //new joke lib
-        //JokeLibClass jokes = new JokeLibClass();
-        //String joke = jokes.getJoke();
-
-        //sendJokeToDisplayLibrary(joke);
-        //mJokeText.setText(joke);
-    //}
     public void tellJoke(View view){
-
         new JokeAsyncTask().execute(this);
-
     }
-/*    private void sendJokeToDisplayLibrary(String joke) {
-        Intent intent = new Intent(this, DisplayJokeActivity.class);
-        intent.putExtra(DisplayJokeActivity.JOKE_KEY, joke);
-        startActivity(intent);
-    }*/
 }

@@ -28,27 +28,4 @@ public class CustomTest {
         onView(withId(R.id.btn_tellJoke)).perform(click());
         onView(withId(R.id.tv_joke)).check(matches(not(withText(""))));
     }
-
-
-
-
-
-
-
-/*    @Test //credit to https://github.com/KKdev13/BuildItBigger-Android
-    public void testAsyncTask()
-    {
-        String mJoke = null;
-        try
-        {
-            JokeAsyncTask jokeTask = new JokeAsyncTask();
-            jokeTask.execute(InstrumentationRegistry.getTargetContext());
-            mJoke = jokeTask.get(30, TimeUnit.SECONDS);
-        } catch(Exception e)
-        {
-            e.printStackTrace();
-        }
-
-        assertNotNull(mJoke);
-    }*/
 }
